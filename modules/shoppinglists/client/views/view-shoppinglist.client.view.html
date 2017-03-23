@@ -65,40 +65,37 @@
           </div>  
     
       </div> -->
+
+<hr>
+
+
+<!-- Added "search" functionality to the table. refactores to allow for both search filter and ordering by content ~jb 03/23 -->
+
 <div class="pull-left">
-<label>Search:</label> <input ng-model="searchText">
+<label class="searchLabel" class="control-label">Search:</label> <input name="searchItem" id ="content" class="searchControl" ng-model="searchText">
+
+
 <table class="table table-bordered table-hover" id="searchTextResults">
-  <tr class="trcolor">
+
+  <tr>
         <th class="thcontent"></th>
         <th class="thitems">Items <button class="btn btn-primary" ng-click="order = 'content'">Order by Item</button></th>
         <th class="thpriority">Priority <button class="btn btn-primary" ng-click="order = 'priority'">Order by Priority</button></th>
         <th class="thnotes">Notes</th>
         <th class="thoptions">Options</th>
   </tr>
-  <tr class="trcolor" ng-repeat="content in vm.shoppinglist.contents | filter:searchText" ng-style="{color: vm.shoppinglist.color}">
-    <td>          <input type="checkbox" class="checkbox" ng-model="content.isChecked" /></td>
-    <td>          <span ng-class="{checked: content.isChecked}">{{ content.content }} </span></td>
-    <td>{{ contents.content }}</td>
+  <tr class="trcolor" ng-repeat="content in vm.shoppinglist.contents | filter:searchText | orderBy: order" ng-style="{color: vm.shoppinglist.color}">
+    <td><input type="checkbox" class="checkbox" ng-model="content.isChecked" /></td>
+    <td><span ng-class="{checked: content.isChecked}">{{ content.content }} </span></td>
     <td>{{ content.priority }}</td>
     <td>{{ content.notes }}</td>  
     <td><div class="trashcan"><button class="deleteicon delete-button" ng-click="vm.deleteContent(content)" class="delete-icon"><img src="http://www.freeiconspng.com/uploads/remove-icon-png-24.png" height="30px" width="30px"></button></div></td>
   </tr>
 </table>
 
-    <button ng-click="vm.deleteSelectedContent()" class="btn btn-default">Clear Selected Items</button>
+    <button ng-click="vm.deleteSelectedContent()" class="btn btn-primary">Clear Selected Items</button>
 
 </div>
-
-
-
-
-
-  
-   <!--  <ul >
-      <li ng-repeat="content in vm.shoppinglist.contents" >
-        {{content}}  {{priority}}
-      </li> 
-    </ul>   -->
   </div>
 
    <div class="pull-right">
@@ -112,7 +109,8 @@
     </a>
   </div>
 
- 
+
+<!-- Inherited comments --> 
   
   <!-- <small>
     <em class="text-muted">

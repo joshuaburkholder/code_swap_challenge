@@ -189,3 +189,35 @@ a:hover .header-profile-image {
 .trashcan {
   padding: 2px 2px 2px 2px;
 }
+
+
+/*Added styling to the match the search label to the title fonts below.- JBurkholder 03/23*/
+
+.searchLabel {
+  color: white !important;
+  line-height: 1.42857143 !important;
+  vertical-align: top !important;
+  font-weight: bold !important;
+  font-size: 24px !important;
+  font-family: 'Baloo Bhaina', cursive !important;
+}
+
+/*Mimiced the 'form-control' styling to keep consistency throughout the page - JBurkholder 03/23*/
+
+.searchControl {
+    width: 280px;
+    height: 30px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;  
+}
