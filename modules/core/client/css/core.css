@@ -186,3 +186,6 @@ a:hover .header-profile-image {
   float: right;
 }
 
+.trashcan {
+  padding: 2px 2px 2px 2px;
+}
