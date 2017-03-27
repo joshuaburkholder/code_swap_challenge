@@ -202,6 +202,24 @@ a:hover .header-profile-image {
   font-family: 'Baloo Bhaina', cursive !important;
 }
 
+.control-label {
+  color: white !important;
+  line-height: 1.42857143 !important;
+  vertical-align: top !important;
+  font-weight: bold !important;
+  font-size: 24px !important;
+  font-family: 'Baloo Bhaina', cursive !important;  
+}
+
+.priorityh3 {
+  color: white !important;
+  line-height: 1.42857143 !important;
+  vertical-align: top !important;
+  font-weight: bold !important;
+  font-size: 24px !important;
+  font-family: 'Baloo Bhaina', cursive !important;
+}
+
 /*Mimiced the 'form-control' styling to keep consistency throughout the page - JBurkholder 03/23*/
 
 .searchControl {

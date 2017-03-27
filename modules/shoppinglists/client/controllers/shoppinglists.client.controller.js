@@ -94,15 +94,15 @@
       for(var i=(vm.shoppinglist.contents.length -1); i > -1; i--) {
         if(vm.shoppinglist.contents[i].isChecked) {
           vm.shoppinglist.contents.splice(i, 1); 
-           vm.shoppinglist.contents = vm.contentList;
+          vm.shoppinglist.contents = vm.contentList;
         }
        
       }  
         // vm.shoppinglist.contents = vm.contentList;
-        if (vm.shoppinglist._id) {
+      if (vm.shoppinglist._id) {
          // vm.shoppinglist.contents = vm.contentList;
         vm.shoppinglist.$update(successCallback, errorCallback);
-        }
+      }
       function successCallback(res) {
         $state.go('shoppinglists.view', {
           shoppinglistId: res._id
