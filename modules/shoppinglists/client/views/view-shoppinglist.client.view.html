@@ -40,7 +40,7 @@
         </div>
 
 <div class="uploadImg">
-    <fieldset>
+    <fieldset><div class="form-group">
       <legend ng-style="{color: vm.shoppinglist.color}">Upload on form submit</legend>
       Username:
       <input type="text" name="userName" ng-model="username" size="31" required>
@@ -61,7 +61,7 @@
       </span>
       <span ng-show="picFile.result">Upload Successful</span>
       <span class="err" ng-show="errorMsg">{{errorMsg}}</span>
-    </fieldset>
+    </div class="form-group"></fieldset>
 </div>
 
         <div class="form-group"> 
@@ -72,7 +72,7 @@
 
 </div>
 
-{{picFile}}
+
       </form>    
     </div>
 
@@ -120,6 +120,8 @@
     <td>{{ content.priority }}</td>
     <td>{{ content.notes }}</td>  
     <td><div class="trashcan"><button class="deleteicon delete-button" ng-click="vm.deleteContent(content)" class="delete-icon"><img src="http://www.freeiconspng.com/uploads/remove-icon-png-24.png" height="30px" width="30px"></button></div></td>
+    <td><input type="file"/></td>
+    <td>{{ content.picFile }}</td>
   </tr>
 </table>
 

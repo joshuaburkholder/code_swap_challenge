@@ -5,7 +5,7 @@
     .module('shoppinglists')
     .controller('ShoppinglistsListController', ShoppinglistsListController);
 
-  ShoppinglistsListController.$inject = ['ShoppinglistsService'];
+  ShoppinglistsListController.$inject = ['ShoppinglistsService', 'fileUpload'];
 
   function ShoppinglistsListController(ShoppinglistsService) {
     var vm = this;
